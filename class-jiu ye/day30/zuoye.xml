@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE newspaper[ 
+<!ELEMENT newspaper (article+)>
+<!ELEMENT article (heading,byline,lead,body,notes)>
+<!ELEMENT heading (#PCDATA)>
+<!ELEMENT byline (#PCDATA)>
+<!ELEMENT lead (#PCDATA)>
+<!ELEMENT body (#PCDATA)>
+<!ELEMENT notes (#PCDATA)> 
+<!ATTLIST article author CDATA #REQUIRED>
+<!ATTLIST article editor CDATA #IMPLIED>
+<!ATTLIST article date CDATA #IMPLIED>
+<!ATTLIST article edition CDATA #IMPLIED>
+<!ENTITY newspaper "Vervet Logic Times">
+<!ENTITY publisher "Vervet Logic Press">
+<!ENTITY copyright "Copyright 1998 Vervet Logic Press">
+]>
+<newspaper>
+	<article author="张三" editor="李四" data="2015-08-23" edition="">
+		<heading>画图</heading>
+		<byline>线形</byline>
+		<lead>铅笔 &newspaper;</lead>
+		<body>山水画 &publisher;</body>
+		<notes>白日 &copyright;</notes>
+	</article>
+</newspaper>

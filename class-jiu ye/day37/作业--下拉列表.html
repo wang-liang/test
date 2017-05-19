@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>网页标题</title>
+<meta name="keywords" content="关键字列表" />
+<meta name="description" content="网页描述" />
+<link rel="stylesheet" type="text/css" href="" />
+<style type="text/css">
+.c0{margin-left:500px;background-color:lightgreen;}
+.c1{float:left;}
+.c2{float:left;}
+.c3{float:right;}
+</style>
+<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('#b1').click(function(){
+			//获取选中的选项，删除并追加给对方
+			$('#select1 option:selected').appendTo('#select2');
+			//移到左边
+			$('#b3').click(function(){
+				$('#select2 option:selected').appendTo('#select1');
+			})
+			//全部移到右边
+			$('#b2').click(function(){
+				$('#select1 option').appendTo('#select2');
+			})
+			//全部移到左边
+			$('#b4').click(function(){
+				$('#select2 option').appendTo('#select1');
+			})
+			//双击选项
+			$('#select1').dblclick(function(){  //绑定双击事件
+				$("option:selected",this).appendTo('#select2');
+			})
+			//双击选项
+			$('#select2').dblclick(function(){  //绑定双击事件
+				$("option:selected",this).appendTo('#select1');
+			})
+		})
+	})
+
+</script>
+</head>
+
+<body>
+	<div class="c0" style="width:190px;" >
+		<div class="c1">
+			<select name="" id="select1" multiple="multiple" style="height:150px;background:lightgreen;">
+				<option value="0">选项1</option>
+				<option value="1">选项2</option>
+				<option value="2">选项3</option>
+				<option value="3">选项4</option>
+			</select>
+		</div>
+		<div class="c2">
+		<br />
+			<input type="button" id="b1" style="width:60px;background:lightgreen;" value="-->"><br />
+			<input type="button" id="b2" style="width:60px;background:lightgreen;" value="==>"><br />
+			<input type="button" id="b3" style="width:60px;background:lightgreen;" value="<--"><br />
+			<input type="button" id="b4" style="width:60px;background:lightgreen;" value="<=="><br />
+		</div>
+		<div class="c3">
+			<select id="select2" multiple="multiple" style="height:150px;background:lightgreen;">
+				<option value="4">选项5</option>
+				<option value="5">选项6</option>
+				<option value="6">选项7</option>
+				<option value="7">选项8</option>
+			</select>
+		</div>
+	</div>
+</body>
+</html>

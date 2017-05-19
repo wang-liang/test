@@ -1,0 +1,89 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>网页标题</title>
+<meta name="keywords" content="关键字列表" />
+<meta name="description" content="网页描述" />
+<link rel="stylesheet" type="text/css" href="" />
+<style type="text/css">
+body,ul,li{margin:0;padding:0;}
+ul,li{list-style:none;}
+body{font-size:12px;}
+#dome{
+	width:180px;
+	height:250px;
+	margin:50px auto;
+	padding:0 10px;
+	border:solid 1px black;
+	overflow:hidden;      /*这里隐藏dome2的内容,即dome中出现滚动条,通过scrollTop++实现滚动效果*/
+}
+#dome li{padding:4px 0px;}
+</style>
+</head>
+<script type="text/javascript">
+	
+function init()
+{
+	var dome = document.getElementById("dome");
+	var dome1 = document.getElementById("dome1");
+	var dome2 = document.getElementById("dome2");
+
+	dome1.style.height = dome.offsetHeight + "px";   //让dome1的div高度等于dome元素的可见高度（指边框范围内可见,不含px）
+	dome2.style.height = dome.offsetHeight + "px";
+
+	dome2.innerHTML = dome1.innerHTML;  //将dome1中的内容复制到dome2中
+
+	var timer1 = window.setInterval("start2()",40);  //隔40ms执行一次函数,即scrollTop++;
+	
+	dome.onmouseover = function()
+	{
+		window.clearInterval(timer1);
+	}
+	dome.onmouseout = function()
+	{
+		timer1 = window.setInterval("start2()",40);
+	}
+
+
+}
+
+function start2()
+{
+	if(dome.scrollTop == dome.offsetHeight)  //如果dome中的内容向上滚动的距离等于dome元素对象的可见高度（边框范围内可见）
+	{
+		dome.scrollTop=0;   
+	}
+	else
+	{
+		dome.scrollTop++;    //实现动画效果
+	}
+	
+}
+
+
+
+
+</script>
+
+<body onload="init()">
+	<div id="dome">
+	<div id="dome1">
+		<ul>
+			<li>·2010考研英语大纲到货75折...</li>
+			<li>·权威定本四大名著（人民文...</li>
+			<li>·口述历史权威唐德刚先生国...</li>
+			<li>·袁伟民与体坛风云：实话实...</li>
+			<li>·我们台湾这些年：轰动两岸...</li>
+			<li>·畅销教辅推荐：精品套书50...</li>
+			<li>·2010版法律硕士联考大纲75...</li>
+			<li>·计算机新书畅销书75折抢购</li>
+			<li>·2009年孩子最喜欢的书>></li>
+			<li>·弗洛伊德作品精选集59折</li>
+		</ul>
+	</div>
+	<div id="dome2"></div>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>网页标题</title>
+<meta name="keywords" content="关键字列表" />
+<meta name="description" content="网页描述" />
+<link rel="stylesheet" type="text/css" href="" />
+<style type="text/css"></style>
+<script type="text/javascript">
+
+//数组访问，表格输出
+	var arr = [
+				["周更胜",23,"大专","男",true,"北京大学"],
+				["张三",20,"高中","男",false,"北京科技大学"],
+				["刘红",21,"大学","女",true,"河北大学"],
+				["王五",24,"大学","男",false,"北京理工大学"]
+			 ];
+
+	str = "<table border=1 rules=all align=center width=400>";
+	for(var i=0;i<arr.length;i++)
+	{
+		str +="<tr>";
+		for(var j=0;j<arr[i].length;j++)
+		{
+			str +="<td>"+arr[i][j]+"</td>";
+		}
+		str +="</tr>";
+	}
+	str +="</table>";
+	document.write(str);
+
+
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

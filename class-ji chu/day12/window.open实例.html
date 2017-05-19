@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>网页标题</title>
+<meta name="keywords" content="关键字列表" />
+<meta name="description" content="网页描述" />
+<link rel="stylesheet" type="text/css" href="" />
+<style type="text/css"></style>
+<script type="text/javascript">
+
+
+/*
+Window.open()实例
+当网页加载完成，弹出一个新窗口，新窗口名字叫“win2”
+新窗口的尺寸：width=200，height=200
+新窗口在显示屏幕中居中显示
+单击原窗口中的链接，在新窗口中显示内容
+新窗口10秒钟后，自动关闭
+*/
+window.onload=init;
+function init()
+{
+	var screenWidth = screen.availWidth;
+	var screenHeight = screen.availHeight;
+	var width = 200;
+	var height = 200;
+	var x = (screenWidth-width)/2;
+	var y = (screenHeight-height)/2;
+	var options = "width=200,height=200,left="+x+",top="+y+",toolbar=no,menubar=no,scrollbars=no";
+	var newwin2 = window.open("","win2",options);
+	var timer = newwin2.setTimeout("window.close()",3000);
+}
+
+
+</script>
+</head>
+
+<body>
+	<a href="#" target="win2">公司新闻</a>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn" onclick = "xingxing(event)">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>网页标题</title>
+	<meta name="keywords" content="关键字列表" />
+	<meta name="description" content="网页描述" />
+	<link rel="stylesheet" type="text/css" href="" />
+	<style type="text/css"></style>
+	<script type="text/javascript">
+		//课堂案例：点出满天小星星
+		//网页一打开，天变黑（整个屏幕变为黑色）。
+		//在网页的任何位置点击鼠标，就会在该位置出现一颗小星星。
+		//星星的大小在20-100范围内随机出现。
+		
+		window.onload = init;
+
+		function init()
+		{
+			var v1 = document.body;   // 设置v1等于body这个对象
+			v1.bgColor = "grey";     //设置body对象的背景为black
+			
+			
+
+		}
+		function xingxing(e)
+		{
+			if(window.event)
+			{
+				var x = event.clientX;
+				var y = event.clientY;
+			}
+			else
+			{
+				var x = e.clientX;
+				var y = e.clientY;
+			}
+			
+			var newStar = document.createElement("img");
+			document.body.appendChild(newStar);
+			newStar.src ="images/xingxing.gif";
+			newStar.style.left = x + "px";
+			newStar.style.top = y + "px";
+			newStar.style.position = "absolute";
+			var w = Math.floor(Math.random()*(100-20+1)) + 20;
+			newStar.width = w;
+		}
+	
+	
+	
+	</script>
+</head>
+
+<body >
+		
+</body>
+</html>

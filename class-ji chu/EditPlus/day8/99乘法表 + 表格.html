@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>网页标题</title>
+	<meta name="keywords" content="关键字列表" />
+	<meta name="description" content="网页描述" />
+  <link rel="stylesheet" type="text/css" href="" />
+  <style type="text/css"></style>
+  <script type="text/javascript">
+	document.write("<table border='1'>")    //计算机是根据"形式"来识别字符串的，双引号里面出现双引号，js语言引擎无法识别（无法解释）;因此 border='1'(使用单引号)
+	
+	 for( var i = 1; i <= 9; i++)     //----i表示行号
+		{
+		document.write("<tr>")        //----从这里开始输出一行
+			//输出第i行的所有列
+			for(var j = 1; j <= i; j++)
+			{
+				//输出一列
+				document.write("<td>")      //----在<td>  </td>的中间为要输出的内容，因此document.write("<td>")放在此处
+
+				document.write( i + " x " + j + " = " + i*j + "&nbsp;&nbsp;&nbsp;");
+				              
+				if(i*j < 10)        //判断 i*j 是否小于10，如果小于10，那么输出一个空格("&nbsp;")
+				{
+				document.write("&nbsp;")	
+				document.write("</td>")
+				}
+			}
+				document.write("</tr>")         //在<br/>换行之前即为这一行内容输完，所以</tr>写在<br/>之前
+			//document.write("<br />");--------//<tr>本身就是换行，所以这里的<br/>换行不需要，可以去掉；<br>和<table>之间是不可以有内容的
+		}
+       document.write("</table>")
+  </script>
+ </head>
+
+ <body>
+ 
+ </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!--
+Comment Here...
+-->
+<html>
+	<head>
+		<title>异步与同步</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script>
+//			//同步进程 任意时刻只有一个进程在运行 当弹出框时 要等待用户完成输入才能继续往下执行
+//			alert("hello");
+			var xhr = new XMLHttpRequest();
+			xhr.onloadend = function () {
+				document.write("hello world");
+			};
+			//使用ajax创建异步的请求进程 异步指任意时刻有多个进程在运行
+			xhr.open("get", "1.php", true);
+			xhr.send(null);
+		</script>
+	</head>
+	<body>
+		<img src="images/loading.gif" />
+	</body>
+</html>

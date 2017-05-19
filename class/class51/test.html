@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+
+<script src="./jquery-1.8.2.min.js"></script>
+
+<script type="text/javascript">
+window.onload = function(){
+	$("input").click(function (){
+	alert(1);
+		$("div").css({background:"red"});
+	});
+}
+	
+</script>
+
+<title>无标题文档</title>
+</head>
+<body>
+	<div id="ab">
+		
+	</div>
+	<input type="button" value="点击"></input>
+
+
+	
+</body>
+</html>
+
+<script >
+	var obj = getElementById("ab").appendChild();
+
+</script>
+
+
+
+
+<table>
+<tr>
+<td width="15%">知识点</td>
+<td>
+<ul><li>$_FILES变量使用</li><li>< input type="file" >表单域应用</li><li>< form enctype="multipart/form-data" ></li><li>move_uploaded_file()</li><li>Page.class.php分页类使用</li><li>jquery的选择器</li><li>jquery的each()遍历方法</li><li>javascript的substring()方法</li><li>< form target="提交目标的name属性值 myframe" ></li><li>< iframe name="myframe" ></li></ul>
+</td>
+</tr>
+<tr>
+<td width="15%">要求</td>
+<td>
+<ul><li>要求添加博文、修改博文都要对图片进行上传维护</li><li>要求把图片上传处理的方法封装为一个方法，实现代码重用</li><li>通过分页类实现博文列表的分页功能</li><li>要求通过iframe实现无刷新方式批量删除博文功能</li></ul>
+</td>
+</tr>
+<tr>
+<td>提示</td>
+<td>
+<ul><li>对一个博文进行图片修改的时候，实际是上传一个新图片，并删除原先的旧图片</li><li>在修改博文的form表单中，制作隐藏域存储已有图片的信息，会方便后续处理</li><li>在博文列表页面中，制作一个iframe，并通过target把form表单注册到这个iframe中</li><li>这样iframe就是form的代表页面，form表单提交就是iframe页面自己的动作，与主体页面没有关系，进而实现无刷新方式批量删除功能</li></ul>
+</td>
+</tr>
+</table>
+
+
+
+
+| 知识点 |  |
+
+| --- | --- |
+
+| 要求 |  |
+
+| 提示 |  |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

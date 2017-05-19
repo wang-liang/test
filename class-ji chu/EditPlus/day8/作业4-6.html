@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>网页标题</title>
+	<meta name="keywords" content="关键字列表" />
+	<meta name="description" content="网页描述" />
+  <link rel="stylesheet" type="text/css" href="" />
+  <style type="text/css"></style>
+  <script type="text/javascript">
+
+
+ //-------------作业4-------------------------------
+  document.write("<br/>")
+  var count = 0; 
+  for(var i = 1; i <= 100; i++){
+	if(i % 3 == 0)
+	{
+		count++;
+	}
+  }
+	document.write("<br />"+ count);
+
+
+  //-------------作业5-------------------------------
+  document.write("<br/>")
+  //(循环)计算1-1000之间能被3整除的偶数的个数。
+  var count = 0;
+  for(var i = 1; i <= 1000; i++)
+  {
+	if(i % 3 == 0 && i % 2 == 0)
+	{
+		count++;
+	}
+  }
+  document.write("<br />" + count);
+
+
+  //-------------作业6-------------------------------
+  document.write("<br/>")
+  for(i = 1;i <= 6;i++){
+  // document.write("<h" + i + ">")      //将i(1~6)这个变量写成"7-i"
+  document.write("<h" + (7 - i) + ">")   //加上（）是为了优先计算括号里面的内容
+  document.write("h" + i)
+  document.write("</h" + (7 - i) + ">")
+  }
+
+  </script>
+ </head>
+
+ <body>
+ 
+ </body>
+</html>

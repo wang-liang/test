@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+ <head>
+  <title> New Document </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+ </head>
+
+ <body>
+  <table border="1" width="400" bordercolor=#FF00FF cellspacing="0">
+	<tr>
+		<td colspan="3" align="center">星期一菜谱</td>
+
+	
+	</tr>
+		<tr>
+        <td rowspan="2" width="40">素菜</td>
+		<td width="250">清炒茄子</td>
+		<td>花椒扁豆</td>
+	</tr>
+		<tr>
+		<td>小葱豆腐</td>
+		<td>炒白菜</td>
+	</tr>
+		<tr>
+		
+        <td rowspan="2">荤菜</td>
+		<td>油焖大虾</td>
+		<td>海参鱼翅</td>
+	</tr>
+		<tr>
+		<td>红烧肉<img src="images/2.bmp"/></td>
+		<td>烤全羊</td>
+	</tr>
+  </table>
+ </body>
+</html>

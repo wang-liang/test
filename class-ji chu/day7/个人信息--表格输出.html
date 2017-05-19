@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>网页标题</title>
+	<meta name="keywords" content="关键字列表" />
+	<meta name="description" content="网页描述" />
+	<link rel="stylesheet" type="text/css" href="" />
+	<script type="text/javascript">
+		var name="周更生";
+		var sex="男";
+		var age="34岁";
+		var edt="大专";
+		var isMarried="false";
+		
+		var school="北京科技大学";
+		var str = "";
+				str +='<table border="1" cellpadding="0" cellspacing="0" width="450" align="center" >';
+	str +='<tr>';
+		str +='<th colspan="4" >'+name+'个人简历</th>';
+	str +='</tr>';
+	str +='<tr>';
+		str +='<td>姓名：</td>';
+		str +='<td>'+name+'</td>';
+		str +='<td>性别：</td>';
+		str +='<td>'+sex+'</td>';
+	str +='</tr>';
+	str +='<tr>';
+		str +='<td>年龄：</td>';
+		str +='<td>'+age+'</td>';
+		str +='<td>学历：</td>';
+		str +='<td>'+edt+'</td>';
+	str +=	'</tr>';
+	str +=	'<tr>';
+		str +='<td>婚否：</td>';
+		str +='<td>'+(isMarried ? "已婚":"未婚")+'</td>';
+		str +='<td>毕业学校：</td>';
+		str +='<td>'+school+'</td>';
+	str +=	'</tr>';
+	str +='</table>';
+	document.write(str);
+	</script>
+</head>
+
+<body>
+
+</body>
+</html>

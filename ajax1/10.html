@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--
+Comment Here...
+-->
+<html>
+	<head>
+		<title>AJAX登录验证 返回XML结果数据</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<form name="login">
+			<p>账号：<input type="text" name="uname" value="" /></p>
+			<p>密码：<input type="password" name="password" value="" /></p>
+			<input type="submit" value="登录" />
+		</form>
+		<script>
+			//绑定表单提交事件
+			document.login.onsubmit = function () {
+				//获取用户登录信息
+				var uname = this.uname.value;
+				var password = this.password.value;
+				//发送ajax请求到服务器
+				var xhr = new XMLHttpRequest();
+				//获取ajax返回结果 定义完成时的事件处理程序
+				xhr.onloadend = function () {
+					//使用responseXML获取返回的xml结构内容 ajax会自动解析成xml document对象
+					var xmlDoc = this.responseXML;
+					//查询节点的值
+					var status = xmlDoc.getElementsByTagName("status").item(0).firstChild.nodeValue;
+					var info = xmlDoc.getElementsByTagName("info").item(0).firstChild.nodeValue;
+					//输出提示信息
+					alert(info);
+					//如果登录成功 跳转到主页
+					if (status == "true")	location.href = "http://www.itcast.cn";
+				};
+				xhr.open("post", "10.php", true);
+				xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
+				xhr.send("uname=" + encodeURIComponent(uname) + "&password=" + encodeURIComponent(password));
+
+				return false;
+			};
+		</script>
+	</body>
+</html>

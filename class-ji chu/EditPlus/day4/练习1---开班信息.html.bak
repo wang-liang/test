@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>网页标题</title>
+	<meta name="keywords" content="关键字列表" />
+	<meta name="description" content="网页描述" />
+  <link rel="stylesheet" type="text/css" href="" />
+  <style type="text/css">
+	.head1{
+		background:#2777BE;
+		height:34px;
+		text-indent:10px;
+		font-size:16px;
+        color:white;
+        font-weight:bold;
+    }
+    .head1 img{
+        vertical-align:middle;
+    }
+	.c1{
+	    font-size:16px;
+        color:blue;
+        text-indent:10px;
+		line-height:18px;
+	}
+	.c2{
+	    font-size:13px;
+        color:blue;
+		font-weight:bold;
+		text-align:right;
+		line-height:18px;
+	}
+	.c3{
+	    font-size:15px;
+        color:red;
+        font-weight:bold;
+        text-align:right;
+		line-height:18px;
+	}
+	.c4{
+	    font-size:16px;
+        color:black;
+        font-weight:bold;
+		text-indent:10px;
+		line-height:25px;;
+	}
+    #kaiban{
+        border:solid 1px black;
+    }	
+  </style>
+  <script type="text/javascript"></script>
+ </head>
+ 
+ <body> 
+  <table border="0" width="400" cellspacing="0" id="kaiban">
+	<tr>
+		<td colspan="2" class="head1">
+			<img src="images/2.bmp">PHP培训开班信息
+		</td>
+	</tr>
+	<tr>
+		<td class="c4">PHP基础班</td>
+	</tr>
+	<tr>
+		<td class="c1">北京--08月10号</td>
+		<td class="c2">爆满已开班&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="c1">北京--09月12号</td>
+		<td class="c3">预约报名&nbsp;&nbsp;</td>
+	</tr>
+		<tr>
+		<td class="c4">PHP就业班</td>
+	</tr>
+	<tr>
+		<td class="c1">北京--08月14号</td>
+		<td class="c2">爆满已开班&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="c1">北京--09月11号</td>
+		<td class="c3">预约报名&nbsp;&nbsp;</td>
+	</tr>
+		<tr>
+		<td class="c4">PHP基础班</td>
+	</tr>
+	<tr>
+		<td class="c1">北京--09月12号</td>
+		<td class="c3">预约报名&nbsp;&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="c1">北京--09月11号</td>
+		<td class="c3">预约报名&nbsp;&nbsp;</td>
+	</tr>
+  </table>
+ </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>网页标题</title>
+<meta name="keywords" content="关键字列表" />
+<meta name="description" content="网页描述" />
+<link rel="stylesheet" type="text/css" href="" />
+<style type="text/css"></style>
+<script type="text/javascript">
+function f1(){
+	//利用ajax向服务器发起请求
+	//创建ajax对象
+	var xhr = new XMLHttpRequest();
+	//创建一个新的htp请求协议，并设置请求的服务器端地址
+	xhr.open('get','./02.php');
+	//把http请求发送给服务器
+	xhr.send(null);
+}
+
+
+</script>
+</head>
+
+<body>
+<h2>ajax向服务器发起请求</h2>
+<input type="button" value="触发" onclick="f1()">
+</body>
+</html>

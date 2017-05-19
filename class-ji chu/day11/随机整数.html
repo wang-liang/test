@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>网页标题</title>
+<meta name="keywords" content="关键字列表" />
+<meta name="description" content="网页描述" />
+<meta http-equiv="refresh" content="1" />
+<link rel="stylesheet" type="text/css" href="" />
+<style type="text/css"></style>
+<script type="text/javascript">
+
+var d1 = new Date();
+var d2 = d1.getTime();
+var k1 = new Date("1989/7/21");
+var k2 = k1.getTime();
+var n = (d1-k2)/1000/3600/24;
+document.write("n" );
+
+document.write("<hr>")
+
+
+//求两个数之间的随机整数
+//定义随机数的函数
+function getRandom(max,min)
+{
+	var random = Math.floor(Math.random()*(max-min)+min);
+	document.write(random+"<hr>");
+}
+
+getRandom(0,10);
+getRandom(10,20);
+
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

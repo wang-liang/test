@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+ </HEAD>
+
+ <BODY bgcolor=#99CC33>
+ <!--左边a标签是指定要链接的网页；右边target是指定要在右边的窗口打开内容-->
+  <a href="right.html" target="win2">青花瓷</a>
+  <br/>
+  <a href="right-1.html" target="win2">当兵的人</a>
+  <br/>
+    <a href="right.html" target="win2">青花瓷</a>
+  <br/>
+  <a href="right-1.html" target="win2">当兵的人</a>
+  <br/>
+    <a href="right.html" target="win2">青花瓷</a>
+  <br/>
+  <a href="right-1.html" target="win2">当兵的人</a>
+  <br/>
+    <a href="right.html" target="win2">青花瓷</a>
+  <br/>
+  <a href="right-1.html" target="win2">当兵的人</a>
+
+ </BODY>
+</HTML>

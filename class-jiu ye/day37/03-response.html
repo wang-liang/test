@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>网页标题</title>
+<meta name="keywords" content="关键字列表" />
+<meta name="description" content="网页描述" />
+<link rel="stylesheet" type="text/css" href="" />
+<style type="text/css"></style>
+<script type="text/javascript">
+function f1(){
+	var xhr = new XMLHttpRequest();
+	xhr.onreadystatechange = function(){
+		//获得readyState状态变化信息
+		console.log(xhr.readyState);
+	}
+	xhr.open('get','./03.php');
+	xhr.send(null);
+}
+
+
+</script>
+</head>
+	<h2>ajax接收服务器端返回的信息</h2>
+	<input type="button" value="触发" onclick="f1()">
+	<div id="result"></div>
+<body>
+
+</body>
+</html>

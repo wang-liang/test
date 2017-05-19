@@ -1,0 +1,50 @@
+body,h4,a,ul,li,ol,span,p,div{margin:0px;padding:0px;}
+ul,li,ol{list-style:none;}
+a:link,a:visited{color:black;text-decoration:none;}
+a:hover{color:red;}
+img{border:0;}
+.red{color:red;}
+.blue{color:blue;}
+.clear{clear:both;}
+body{
+	font-size:12px;
+	font-family:Arial,宋体;
+	background:url(../images/bg-body.gif) repeat-x #cacaca;
+	
+}
+.box{	
+	width:1000px;
+	height:600px;
+	margin:0px auto;
+}
+.top{height:27px;line-height:27px;}
+.top p{float:left;}
+.top ul{float:right;}
+.top li{float:left;}
+.top li a{border-right:dotted 1px grey;padding:0 10px;}
+.top .noline{border:none;}
+.top .red{color:red;}
+.middle{height:120px;}
+.middle .c1{float:left;margin-top:23px;}
+.middle .c2{float:left;width:400px;padding-left:26px;padding-top:6px;}
+.middle .c3{float:right;margin-top:18px;}
+.middle .c2 h4{color:blue;font-size:26px;padding:8px 8px 8px 0;}
+.middle .c2 li{
+	float:left;
+	width:80px;
+	height:20px;
+	line-height:20px;
+	background:url(../images/li01.png) no-repeat;
+	padding:0px 6px 5px 3px;
+	color:white;
+}
+.middle .c2 .orange{background:url(../images/bg_xiala1.png) no-repeat;}
+.title{height:47px;line-height:47px;}
+.title li{float:left;margin-right:8px;}
+.title a{width:70px;color:white;font-weight:bold;display:block;text-align:center;}
+.title a:hover{background:url(../images/menu2.gif) no-repeat;}
+.title a.a1{width:85px;}
+.title a.a1:hover{background:url(../images/menu1.gif) no-repeat;}
+
+
+

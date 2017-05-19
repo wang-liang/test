@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>网页标题</title>
+	<meta name="keywords" content="关键字列表" />
+	<meta name="description" content="网页描述" />
+  <link rel="stylesheet" type="text/css" href="" />
+  <style type="text/css"></style>
+  <script type="text/javascript">
+  
+  //-------------作业7-------------------------------
+  //7. 输出从2000年（含）到3000年（含）间的所有闰年。 
+  //闰年就是能被4整除 被100整除的年，或者能被400整除的年。
+
+  document.write("<br/>")
+  var i = 2000;
+  for(i=2000; i<=3000; i++){
+  if((i % 4 == 0 && i % 100 != 0) ||( i % 400 == 0))
+  {
+  document.write(i+" ");
+  }
+  }
+  </script>
+ </head>
+
+ <body>
+ 
+ </body>
+</html>

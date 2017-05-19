@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>网页标题</title>
+<meta name="keywords" content="关键字列表" />
+<meta name="description" content="网页描述" />
+<link rel="stylesheet" type="text/css" href="" />
+<style type="text/css"></style>
+<script type="text/javascript">
+//复制继承制作一个(构造)函数(2个成员),另外还有3个独立的对象(每个对象有一个成员方法)
+//通过构造函数实例化三个对象，三个对象分别依次去去继承另外三个对象
+//结果：三个对象他们有共同的两个默认成员，还有一个“个性化”成员
+
+function Animal(){
+	this.color = "black";
+	this.leg = 4;
+}
+Animal.prototype.extend = function(obj){
+	for(var k in obj){
+		//只复制本身不存在的成员
+		if(this.hasOwnProperty(k)===false){
+			this[k] = obj[k];
+		}
+	}
+}
+var wolf = {tail:"笔直的尾巴"};
+var tiger = {say:"hello"};
+var dog = {hobby:"散步"};
+//实例化对象
+var cat1 = new Animal();
+cat1.extend(wolf);
+var cat2 = new Animal();
+cat2.extend(tiger);
+var cat3 = new Animal();
+cat3.extend(dog);
+//输出
+console.log(cat1);
+console.log(cat2);
+console.log(cat3);
+
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

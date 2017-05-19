@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>网页标题</title>
+	<meta name="keywords" content="关键字列表" />
+	<meta name="description" content="网页描述" />
+  <link rel="stylesheet" type="text/css" href="" />
+  <style type="text/css"></style>
+  <script type="text/javascript"></script>
+ </HEAD>
+
+ <BODY>
+  <form>
+  <table borde="1" bgcolor="#99FF00" width="400" cellpadding="0">
+  <tr  bgcolor=#339933>
+      <td align="right">公司名称:</td>
+      <td><input type="text" name="w1"></td>
+  </tr>
+ <tr>
+      <td align="right">公司地址:</td>
+      <td><input type="text" name="w2"></td>
+  </tr> 
+  <tr>
+      <td align="right">公司网站:</td>
+      <td><input type="text" name="w3"></td>
+  </tr>
+  <tr>
+      <td align="right">登录名称:</td>
+      <td><input type="text" name="w4"></td>
+  </tr>
+   <tr>
+      <td align="right">登录密码:</td>
+      <td><input type="paaaword" name="n1" size="18" value=""></td>
+  </tr>
+   <tr>
+      <td align="right">性别:</td>
+      <td>
+	  <input type="radio" name="n2" />男
+	  <input type="radio" name="n2" />女
+	  </td>
+  </tr>
+ <tr>
+      <td align="right">密码查询问题:</td>
+      <td>
+	 <select name="n3">
+	 <option value="1">请在此选择密码查询问题！</option>
+	 <option value="2">你的出生地在哪</option>
+	 <option value="3">你的第一所学校名字</option>
+	 </select>
+	 </td>
+  </tr>
+ <tr>
+      <td align="right">密码查询答案:</td>
+      <td><input type="text" name="n4"></td>
+  </tr>
+  <tr>
+      <td align="right">联系人姓名:</td>
+      <td><input type="text" name="n5"></td>
+  </tr>
+  <tr>
+      <td align="right">联系人证件:</td>
+      <td><input type="file" name="n6"></td>
+  </tr>
+ <tr>
+      <td align="right" background="images/1.bmp" width="147">备注：</td>
+      <td><textarea name="n7" cols="30" rows="5"></textarea></td>
+  </tr>
+<tr>
+      <td align="right"></td>
+      <td>
+		<input type="submit" value="提交信息">
+		<input type="button" value="取消">
+	  </td>
+  </tr>
+  </table>
+  </form>
+ </BODY>
+</HTML>

@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        //① 绘制操作界面
+        function Map(){
+            //不变的信息通过“私有成员”定义
+            //变的信息通过“公开的成员”定义
+            var w = 800;
+            var h = 400;
+
+            //绘制地图
+            this.showmap = function(){
+                //创建div、设置样式、追加给body
+                var ditu = document.createElement('div');
+
+                ditu.style.width  = w+"px";
+                ditu.style.height = h+"px";
+                ditu.style.backgroundColor = "pink";
+                ditu.style.backgroundImage = "url(./bg.jpg)";
+
+                document.body.appendChild(ditu);
+            }
+        }
+
+        //② 食物
+        function Food(){
+            var len = 20;
+            //绘制食物
+            this.showfood = function(){
+                //创建div、设置样式、追加给body
+                var piece = document.createElement('div');
+
+                piece.style.width = piece.style.height = len+"px";
+                piece.style.backgroundColor = "green";
+                //给食物设置“绝对定位 position/left/top”
+                piece.style.position="absolute";
+                //食物需要放到“小格子”里边，不能压线
+                //食物移动的最小距离是“步进值”，值为20
+                //食物移动的距离称为"权",x轴有权坐标(0-39)，y轴也有权坐标(0-19)
+                //食物移动的真实距离：步进值 * 权
+                //食物的“随机”权坐标设置
+                var foodX = Math.floor(Math.random()*40);
+                var foodY = Math.floor(Math.random()*20);
+                piece.style.left = foodX * len+"px";
+                piece.style.top  = foodY * len+"px";
+
+                document.body.appendChild(piece);
+            }
+        }
+
+        //③ 小蛇
+        function Snake(){
+            var len = 20; //蛇节的边长
+            //定义小蛇(二维数组)
+            this.snakebody = [[0,1,'green'],[1,1,'green'],[2,1,'green'],[3,1,'red']];
+            
+            //绘制小蛇
+            this.showsnake = function(){
+                //遍历snakebody创建4个div蛇节、设置样式、追加给body
+                for(var i=0; i<this.snakebody.length; i++){
+                    var jie = document.createElement('div');
+                    
+                    jie.style.width = jie.style.height = len+"px";
+                    jie.style.backgroundColor = this.snakebody[i][2];//颜色
+                    //给蛇节设置“绝顶定位”
+                    jie.style.position = "absolute";
+                    jie.style.left = this.snakebody[i][0] * len+"px";
+                    jie.style.top  = this.snakebody[i][1] * len+"px";
+
+                    document.body.appendChild(jie);
+                }
+            }
+        }
+
+        window.onload = function(){
+            var map = new Map();
+            map.showmap();
+
+            var food = new Food();
+            food.showfood();
+
+            var snake = new Snake();
+            snake.showsnake();
+        }
+        </script>
+
+        <style type="text/css">
+        body{margin:0;}
+        </style>
+    </head>
+    <body>
+    </body>
+</html>

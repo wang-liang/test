@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>网页标题</title>
+	<meta name="keywords" content="关键字列表" />
+	<meta name="description" content="网页描述" />
+  <link rel="stylesheet" type="text/css" href="" />
+  <style type="text/css"></style>
+  <script type="text/javascript">
+  //-------------作业9-------------------------------
+  //一张纸的厚度是0.01毫米，则该纸对折30次后是多厚（据说超过珠穆朗玛峰的高度）。反过来，一张纸对折几次后，就超过1米厚了？
+
+  var houdu = 0.01/1000;         //单位是米
+  for(var i=1; i<=30; i++){      //i为对折的次数
+	houdu = houdu * 2
+  }
+  document.write("<br />9：对折30次之后的厚度：" + houdu );
+
+  document.write("<br />");
+  var houdu = 0.01/1000;         //单位是米
+  for(var i=1; i<=30; i++){      //i为对折的次数
+	houdu = houdu * 2
+	if(houdu >1 && houdu <2)
+	{
+		document.write("&nbsp;&nbsp;&nbsp;" + "此时对折的次数为" + i);
+	}
+  }
+  </script>
+ </head>
+
+ <body>
+ 
+ </body>
+</html>

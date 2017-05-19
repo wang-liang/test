@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--
+Comment Here...
+-->
+<html>
+	<head>
+		<title>AJAX登录验证</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<form name="login"  method="post" action="">
+			<p>账号：<input type="text" name="uname" value="" /></p>
+			<p>密码：<input type="password" name="password" value="" /></p>
+			<input type="submit" value="登录" />
+			<div id="preview"></div>
+		</form>
+		<script>
+			//绑定表单提交事件
+			document.login.onsubmit = function () {
+				//客户端JS 请求初始化前 获取用户登录信息
+				var uname = this.uname.value;
+				var password = this.password.value;
+				/**
+				 * 发送AJAX请求到服务器验证该账号和密码
+				 */
+				//创建请求对象
+				var xhr = new XMLHttpRequest();
+//				//注册请求开始时的事件处理程序
+//				xhr.onloadstart = function () {
+//					//查看请求状态值 使用readyState属性
+//					document.getElementById("preview").innerHTML = "建立请求：" + this.readyState;
+//				};
+//				//定义请求处理中的事件处理程序
+//				xhr.onprogress = function () {
+//					document.getElementById("preview").innerHTML += "处理中：" + this.readyState;
+//				};
+//
+//				//注册完成时的动作
+//				xhr.onloadend = function () {
+//					document.getElementById("preview").innerHTML += "完成！：" + this.readyState + this.responseText;
+//				};
+				//请求状态改变时 触发的事件 0-1 1-2 2-3 3-4
+				xhr.onreadystatechange = function () {
+//					alert(1);
+					//获取完成时的状态
+					if (this.readyState == this.DONE && this.statusText == "OK") {
+						document.getElementById("preview").innerHTML = this.responseText;
+					} else {//请求过程中 显示等待提示
+						document.getElementById("preview").innerHTML = "<img src='images/loading.gif' />";
+					}
+				};
+				//建立请求
+				xhr.open("get", "2.php?uname=" + uname + "&password=" + password, true);
+				//发送数据
+				xhr.send(null);
+				return false;		//阻止表单提交
+			};
+		</script>
+	</body>
+</html>

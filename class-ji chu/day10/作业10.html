@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>网页标题</title>
+<meta name="keywords" content="关键字列表" />
+<meta name="description" content="网页描述" />
+<link rel="stylesheet" type="text/css" href="" />
+<style type="text/css"></style>
+<script type="text/javascript">
+//数组访问，表格输出
+	var arr = [
+				["周更胜",23,"大专","男",true,"北京大学"],
+				["张三",20,"高中","男",false,"北京科技大学"],
+				["刘红",21,"大学","女",true,"河北大学"],
+				["王五",24,"大学","男",false,"北京理工大学"]
+			 ];
+	
+	var str = "<table border=1 rules=all width=500 align=center>";
+	for(var i=0;i<arr.length;i++)
+	{
+		str +="<tr>";
+		for(var j=0;j<arr[i].length;j++)
+		{
+			str +="<td>"+arr[i][j]+"</td>";
+		}
+		str +="</tr>";
+	}
+	str +="</table>";
+	document.write(str);
+
+	document.write("<br />");
+
+//使用new关键字结合构造函数Object来创建一个空对象
+	var obj = new Object();
+	obj.name = "张三";
+	obj.sex = "男";
+	obj.age = 23;
+	obj.isMarrid = true;
+	obj.shool;
+	obj.showInfo = function(){
+			var str = "<h2>"+ obj.name +"的个人信息</h2>";
+				str += "姓名:"+ obj.name;
+				str += "<br />性别:"+ obj.sex;
+				str += "<br />年龄:"+ obj.age;
+				str += "<br />婚否:"+ (obj.isMarrid ? "已婚" : "未婚");
+				str += "<br />毕业院校:"+ (obj.school ? obj.school :"未填写");
+				return str;
+	}
+	document.write(obj.showInfo());
+	document.write("<hr>");
+
+//定义一个函数，通过调用函数给出最大值
+	var max;
+	function fun1(a,b)
+	{
+		if(a>b)
+		{
+			max=a;
+		}else
+		{
+			max=b;
+		}
+		return max;
+	}
+	document.write("<br />最大值为："+ fun1(20,30));
+
+	document.write("<hr>");
+
+//（二维数组，逻辑，偏难）定义一个二维数组（比如3行4列），输入任意12个数值，求该数组的平均值，最大值、最小值。
+
+var arr1 = [
+			[1,2,3,4],
+			[1,22,33,4],
+			[1,2,3,42]
+		   ]
+	var sum = 0;	
+	var a=0;
+	for(var i=0;i<arr1.length;i++)
+	{
+		for(var j=0;j<arr1[i].length;j++)
+		{
+			sum +=arr1[i][j];
+			a++;
+		}
+	}
+	document.write(sum/a);
+	
+	var max = arr1[0][0];
+	for(var i=0;i<arr1.length;i++)
+	{
+		for(var j=0;j<arr1[i].length;j++)
+		{
+			if(max<arr1[i][j])
+			{
+				max=arr1[i][j];
+				
+			}
+		}
+	}
+	document.write("最大值为：" + max);
+
+
+	
+//（函数）定义一个函数：求数组中的最大值
+	//定义函数
+	var arr = [7,2,4,5,25,23,20,18];
+	var max = arr[0];
+	function fun1()
+	{
+		for(var i=0;i<arr.length;i++)
+		{
+			if(max<arr[i])
+			{
+				max = arr[i];
+			}
+		}
+		return max;
+	}
+	//调用函数
+	var k1 = fun1();
+	document.write("最大值为：" + max + "<br />");
+	
+
+
+//（函数）定义一个函数：让用户输入一个年份，来判断是否是闰年。如果是闰年，输出“发放双倍2月份工资”，否则，输出“2月份工资减半”
+
+	var m = window.prompt("请输入年份");
+	function fun2()
+	{
+		if(m==null)
+		{
+			document.write("您已取消操作，请重新输入");
+		}
+		else if(m%4==0 && m%100!=0 || m%400==0)
+		{
+			document.write("发放双倍2月份工资");
+		}
+		else
+		{
+			document.write("2月份工资工资减半");
+		}
+	}
+	var k2 = fun2();
+	
+
+
+//求直角三角形斜边长
+	
+	var a = 3; var b = 4;
+	var s;
+	function fun3(a,b)
+	{
+		s = a*a + b*b;
+		s1=Math.pow(s,0.5);
+		return s1;
+	}
+	var k3 = fun3(3,4);
+	document.write("<br />" + k3+ "<br />");
+
+	
+//输出1-100偶数的和
+	var sum=0;
+	for(var i=1;i<=100;i++)
+	{
+		if(i%2==0)
+		{
+			sum +=i;  //sum=sum+i
+		}
+	}
+	document.write("和为："+ sum + "<br />");
+
+//输出1-50的整数
+	for(var i=1;i<=100;i++)
+	{
+		if(i>50)
+		{
+			break;
+		}
+		document.write(i + " "+ "<br />");
+	}    
+
+
+//1-100的偶数
+	for(j=1;j<=100;j++)
+	{
+		if(j%2!=0)
+		{
+			continue;
+		}
+		document.write(j+" "+ "<br />")
+	}
+
+
+//今天是星期几
+var d1=new Date();
+	var w=d1.getDay();
+	var str;
+	switch(w)
+	{
+		case 1:
+		str = "一";
+		break;
+		case 2:
+		str = "二";
+		break;
+		case 3:
+		str = "三";
+		break;
+		case 4:
+		str = "四";
+		break;
+		case 5:
+		str = "五";
+		break;
+		case 6:
+		str = "六";
+		break;
+		default:
+		str = "日";
+	}
+	document.write("星期：" + str+ "<br />");
+
+
+//
+
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

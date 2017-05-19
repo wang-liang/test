@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>网页标题</title>
+<meta name="keywords" content="关键字列表" />
+<meta name="description" content="网页描述" />
+<link rel="stylesheet" type="text/css" href="" />
+<style type="text/css"></style>
+<script type="text/javascript">
+//1. 利用闭包实现无序列表项目“点击”的时候弹出内部对应的信息
+//	(考虑减少变量名字使用)
+
+
+var person = ['student','teacher','workman','farmer'];
+var ull = document.createElement('ul');
+for(var i=0;i<person.length;i++){
+	var lii = document.createElement('li');
+	var txt = document.createTextNode(person[i]);
+
+	//追加
+	lii.appendChild(txt);
+	ull.appendChild(lii);
+
+	//给lii设置mouseover和mouseout事件
+	lii.addEventListener('mouseover',function(){
+		this.style.backgroundColor = "gray";
+	});
+	lii.addEventListener('mouseout',function(){
+		this.style.backgroundColor = "";
+	});
+	lii.addEventListener('click',function(){
+		alert(ff);
+	});
+}
+
+function f1(){
+		function f2(){
+			console.log(this.txt);
+		}
+		return f2;
+}
+var ff = f1();
+
+window.onload = function(){
+	document.body.appendChild(ull);
+}
+
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

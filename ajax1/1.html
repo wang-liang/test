@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!--
+Comment Here...
+-->
+<html>
+	<head>
+		<title>创建请求对象</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<script>
+			//创建请求对象
+			var xhr = new XMLHttpRequest();
+			//查看对象的内容
+			for (var item in xhr) {
+				document.write(item, ":", xhr[item], "<br />");
+			}
+		</script>
+	</body>
+</html>

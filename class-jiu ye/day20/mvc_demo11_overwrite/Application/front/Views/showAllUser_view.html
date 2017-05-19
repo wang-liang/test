@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>网页标题</title>
+<meta name="keywords" content="关键字列表" />
+<meta name="description" content="网页描述" />
+<link rel="stylesheet" type="text/css" href="" />
+<style type="text/css"></style>
+<script type="text/javascript">
+function delRow(){
+	if(window.confirm('你确定要删除吗？'))
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+</script>
+</head>
+
+<body>
+<a href='?p=front&c=Product&a=showAllProduct'><font color='red'>产品列表</font></a>
+<a href='?p=front&c=User&a=AddUser'><font color='red'>添加用户</font></a>
+<table border='1'>
+	<?php 
+	foreach($data1 as $key=>$rec){  //循环遍历二维数组
+	?>
+	<tr>
+		<td><?php echo $rec['username'];?></td>
+		<td><?php echo $rec['age'];?></td>
+		<td><?php echo $rec['edu'];?></td>
+		<td><?php echo $rec['fav'];?></td>
+		<td><?php echo $rec['from2'];?></td>
+		<td><?php echo $rec['addate'];?></td>
+		<td>
+			<a href='?p=front&c=User&a=Del&id=<?php echo $rec['id'];?>' onclick='return delRow()'>删除</a>
+			<a href='?p=front&c=User&a=showOneUser&id=<?php echo $rec['id'];?>'>详细</a>
+			<a href='?p=front&c=User&a=Edit&id=<?php echo $rec['id'];?>'>修改</a>
+		</td>
+	</tr>
+	<?php
+	}
+	?>
+</table>
+
+当前用户总数为：<?php echo $data2;?>
+<hr />
+<a href='?p=back&c=Admin&a=Login'>进入后台</a>
+</body>
+</html>

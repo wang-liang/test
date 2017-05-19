@@ -1,0 +1,174 @@
+body,ul,li,h4,a,p,input{margin:0px;padding:0px;}
+ul,li,ol{list-style:none;}
+a:link,a:visited{color:#444;text-decoration:none;}
+a:hover{color:red;}
+img{border:0;}
+body{
+	font-size:12px;
+	color:#444;
+	font-family:'Microsoft YaHei',Arial;
+	text-align:center; /*IE5.5主页居中*/
+	background:#f2f2f2 url(../images/bg-top.png) repeat-x;
+}
+/*全局CSS类样式设置*/
+.blank{clear:both;}
+.blank10{clear:both;height:10px;}
+
+
+/*网页导航栏CSS样式*/
+.header{width:1200px;margin:0px auto;height:60px;line-height:60px;}
+.header .logo{height:60px;float:left;}
+.header .logo img{width:138px;height:60px;}
+.header .menu{height:60px;float:left;padding-left:60px;}
+.header .menu li{float:left;}
+.header .menu li a{font-size:18px;display:block;padding:0px 15px;color:white;}
+.header .menu li a:link,.header .menu li a:visited{text-decoration:none;}
+.header .menu li a:hover{background-color:#00aa98;}
+.header .menu li a.a2{background-color:#00aa98;}
+.header .search{width:210px;height:45px;padding-top:15px;float:right;}
+.header .search .txt{
+	width:115px;height:30px;color:#686868;float:left;
+	background-color:#2f2f2f;border:none;padding-left:5px;
+}
+.header .search a{
+	text-decoration:none;
+	width:30px;
+	height:30px;
+	display:block;
+	line-height:30px;
+	color:#999;
+	float:left;
+	background-color:#2f2f2f;
+}
+.header .search .sub{
+	width:35px;
+	height:30px;
+	border:none;
+	float:left;
+	background:#2f2f2f url(./all_icon.png) no-repeat 0 -20px;
+}
+.header .other{
+	width:110px;
+	height:60px;
+	float:right;
+	font-size:14px;
+	color:white;
+}
+.header .other a{color:#ccc;padding:0px 3px;}
+/*面包屑*/
+.crumbs{width:1200px;margin:0px auto;text-align:left;}
+.crumbs .nav{
+	height:30px;
+	line-height:30px;
+	font-size:14px;
+}
+.crumbs .nav .span1{
+	width:20px;
+	height:30px;
+	float:left;
+	background:url(./search.png) no-repeat;
+	display:block;
+}
+.crumbs .nav .span2{
+	width:20px;
+	height:30px;
+	float:block;
+	float:left;
+}
+.crumbs .info{
+	height:30px;
+	line-height:30px;
+	padding-left:30px;
+	background:url(./chart.png) no-repeat;
+}
+.crumbs .info .pipe{padding:0px 8px;color:#ccc;}
+.crumbs .info em{font-style:normal;color:#000;}
+
+/*网页局部CSS样式设置*/
+.box{
+	width:1200px;
+	margin:0px auto;
+	text-align:left;
+}
+/*左侧模块*/
+.left{width:900px;float:left;}
+/*幻灯片模块*/
+.left .ppt{background-color:white;padding:10px;border:1px solid #ccc;}
+.left .ppt .div1{width:540px;float:left;}
+.left .ppt .div2{width:320px;float:right;}
+.left .ppt .div2 .divTop{border-bottom:1px solid #eee;padding-bottom:5px;}
+.left .ppt .div2 .divTop h4{font-size:22px;padding:8px 0px;color:red;}
+.left .ppt .div2 .divTop p{color:#999;}
+.left .ppt .div2 .divBottom{padding-top:5px;}
+.left .ppt .div2 .divBottom li{font-size:12px;padding:4px 0px;border-bottom:1px dashed #ccc;}
+/*今日头条模块*/
+.left .board{background-color:white;padding:10px;border:1px solid #ccc;}
+.left .board .title{font-size:18px;padding:5px 0px;border-bottom:1px solid #eee;}
+.left .board .content{padding:10px 0px;width:430px;height:100px;float:left;}
+.left .board .content img{padding:0px 5px;float:left;}
+.left .board .content span{width:310px;float:left;}
+.left .board .content span h4{font-size:16px;color:#666;padding-bottom:8px;}
+.left .board .content span p{padding:3px 0px;}
+
+/*右侧模块*/
+.right{width:270px;padding:10px;float:right;background-color:white;border:1px solid #ccc;}
+.right img{padding-bottom:14px;cursor:pointer;}
+.right .recommend{padding:5px 0px;}
+.right .recommend h4{font-size:18px;padding:5px 0px;border-bottom:1px solid #eee;}
+.right .recommend ul{padding:5px 0px;}
+.right .recommend li{padding:5px 0px;border-bottom:1px dashed #ccc;}
+
+/*页脚CSS样式设置*/
+.footer{background:url(../images/bg-top.png) repeat-x;}
+.footer .content{
+	width:1200px;
+	height:50px;
+	margin:0px auto;
+	font-size:14px;
+	color:#ccc;
+	line-height:50px;
+}
+/*******************************注册登录模块样式**************************************/
+.register{width:1200px;height:500px;margin:0px auto;text-align:left;background-color:white;}
+.register .title{height:32px;line-height:32px;padding:0px 10px;background:url(./bg-title.png) repeat-x;}
+.register .title .spanL{float:left;}
+.register .title .spanR{float:right;}
+.register form{padding:10px 0px;}
+.register th{font-size:14px;font-weight:normal;}
+.register td{padding:5px;}
+.register .rq{color:red;}
+.register .px{border:1px solid #ccc;padding:8px 5px;}
+.register .floatL{float:left;}
+
+/******************************主题列表样式******************************************/
+.list{background-color:white;padding:10px;border:1px solid #ccc;}
+.list .title{height:32px;line-height:32px;padding-left:10px;background:url(./bg-title.png);}
+.list .content{}
+.list .content img{float:left;margin:0 20px 0 5px;border-radius:30px;}
+.list .content li{border-bottom:1px solid #efefef;padding:15px 0;}
+.list .content a:link,.list .content a:visited{color:#1d3779;}
+.list .content a:hover{color:red;text-decoration:underline;}
+.list .content h4{font-size:16px;font-weight:normal;padding:0px 0px 10px 0px;}
+.list .content p{color:#999;}
+
+/*****************************主题分页页码样式**************************************/
+.list .pagelist{height:50px;line-height:50px;text-align:center;}
+.list .pagelist a{padding:6px 10px;border:1px solid #e8e8e8;}
+.list .pagelist a:link,.list .pagelist a:visited{}
+.list .pagelist a:hover{background-color:#555;color:white;font-weight:bold;border:none;}
+.list .pagelist .current{background-color:#555;color:white;font-weight:bold;padding:6px 10px;border:1px solid #e8e8e8;}
+
+/*****************************贴子内容页样式****************************************/
+.detail{background-color:white;padding:10px;border:1px solid #ccc;}
+.detail .title{height:32px;line-height:32px;padding-left:10px;background:url(./bg-title.png);}
+.detail .content img{float:left;margin:0 20px 0 5px;border-radius:30px;}
+.detail .content li{border-bottom:1px solid #efefef;padding:15px 0;}
+.detail .content p.user{height:48px;line-height:48px;font-size:14px;color:#666;}
+.detail .content .con{padding:10px;font-size:14px;}
+.detail .content .thread{border-bottom:2px dotted gray;padding:10px 0px;}
+.detail .content .thread h4{font-size:20px;padding:10px 0px;}
+.detail .content .thread .user{height:48px;line-height:48px;}
+.detail .content .thread .user img{margin:0 20px 0 5px;border-radius:30px;}
+.detail .content .thread .user span{font-size:16px;}
+.detail .content .thread .content{padding:10px;font-size:16px;}
+.detail .content .thread .content p{padding:10px 0px;}

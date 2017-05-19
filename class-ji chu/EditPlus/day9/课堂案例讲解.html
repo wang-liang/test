@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>网页标题</title>
+	<meta name="keywords" content="关键字列表" />
+	<meta name="description" content="网页描述" />
+  <link rel="stylesheet" type="text/css" href="" />
+  <style type="text/css"></style>
+  <script type="text/javascript">
+  /*输入判断（如果输入错误，怎样可以返回重新输入值的状态而不返回NaN界面 2.输入正确算出结果后，如何计算后面多回（第二次，第三次，.....第n次）运算，而不用重新刷新"F5"来完成）*/
+  function zhi(a,b)
+  {
+	var m=a*a + b*b;
+	var n=Math.pow(m,0.5);
+	return n;
+  }
+  a=prompt("输入的值1：");  //智能提示输入的值
+  b=prompt("输入的值2：");
+  
+  while(isNaN(a) || isNaN(b))   //如果a不是数字，b不是数字，则：
+  { 
+    alert("你刚才输入的不是数字，请重新输入：");
+    a=prompt("输入的值1：");
+    b=prompt("输入的值2：");
+
+  var shuru=zhi(a,b);   
+  }
+
+  if( isNaN(shuru) || typeof(shuru) != "number")   //typeof()可以判断出什么类型...
+  {
+	document.write("您输入的值有误");
+  }
+  else
+  {
+	document.write("<br />结果为:" + shuru);
+  }
+ </head>
+
+ <body>
+ 
+ </body>
+</html>

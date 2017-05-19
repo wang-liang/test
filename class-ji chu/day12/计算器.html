@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>网页标题</title>
+	<meta name="keywords" content="关键字列表" />
+	<meta name="description" content="网页描述" />
+	<link rel="stylesheet" type="text/css" href="" />
+	<style type="text/css"></style>
+	<script type="text/javascript">
+	function jisuan()
+	{
+		var obj1=document.getElementById("shu1");
+		var n1=obj1.value;
+		var obj2=document.getElementById("shu2");
+		var n2=obj2.value;
+		var k=document.getElementById("fuhao");
+		var s1=k.value;
+		if(s1 == "+" )
+		{
+			var s=parseFloat(n1) + parseFloat(n2);
+		}
+		else if(s1 == "-")
+		{
+			var s=parseFloat(n1) - parseFloat(n2);
+		}
+		else if(s1 == "*")
+		{
+			var s=parseFloat(n1) * parseFloat(n2);
+		}
+		else
+		{
+			var s=parseFloat(n1) / parseFloat(n2);
+		}
+		
+		
+		document.getElementById("jieguo").value=s;  //将对象"结果"的value属性设置为s
+	}
+	</script>
+</head>
+
+<body>
+	<form>
+		<input type="text" id="shu1" />
+		<select id="fuhao">
+			<option>+</option>
+			<option>-</option>
+			<option>*</option>
+			<option>/</option>
+		</select>
+		<input type="text" id="shu2" />
+		=
+		<input type="text" id="jieguo" />
+		<br />
+		<input type="button" value="计算" onclick="jisuan()">
+	</form>
+</body>
+</html>

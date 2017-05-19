@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!--
+Comment Here...
+-->
+<html>
+	<head>
+		<title>AJAX请求数据分页</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<div id="content"></div>
+		<script>
+			function display(p) {
+				var xhr = new XMLHttpRequest();
+				//获取返回结果 在页面中显示
+				xhr.onloadend = function() {
+					document.getElementById("content").innerHTML = this.responseText;
+				};
+				xhr.open("post", "9.php", true);
+				xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
+				xhr.send("p=" + p);
+			}
+			display(1);
+		</script>
+	</body>
+</html>

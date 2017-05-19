@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>网页标题</title>
+	<meta name="keywords" content="关键字列表" />
+	<meta name="description" content="网页描述" />
+	<link rel="stylesheet" type="text/css" href="" />
+	<style type="text/css"></style>
+	<script type="text/javascript">
+	//	3.（循环）计算1-100之间能被3整除的偶数的个数。
+			var count = 0;
+			for(var i=1;i<=100;i++)
+			{
+				if(i%3==0&&i%2==0)
+				{
+					count++;
+				}
+			}
+			document.write("能被3整除的偶数的个数：" + count+"个<br />");
+
+		//2.（if语句）根据一个人的存款的多少决定使用什么交通工具：
+		//	如果我有10万元以上，就买小汽车上班
+		//	或者如果我有5000元以上，我就买摩托上班，
+		//	或者如果我有300元以上，我就买自行车上班，
+		//	或者如果我有20元以上，我就坐公交上班，
+		//	否则，我就只好步行上班
+		//	提示：使用一个变量表示其存款数，对该变量进行判断以输出所采用的交通工具
+
+			var m =window.prompt("请输入存款：");
+			if(m>100000)
+			{
+				document.write("买小汽车上班");
+			}
+			else if(m>5000)
+			{
+				document.write("买摩托上班");
+			}
+			else if(m>300)
+			{
+				document.write("买自行车上班");
+			}
+			else if(m>20)
+			{
+				document.write("坐公交上班");
+			}
+			else
+			{
+				document.write("步行上班");
+			}
+			document.write("<br />");
+
+		//（流程：分支与循环）输出从2000年（含）到3000年（含）间的所有闰年。
+			for(var x=2000;x<=3000;x++)
+			{
+				if(x%4==0 && x%100!=0 || x%400==0)
+				{
+					document.write( x + " " );
+				}
+			}
+			document.write("<br />");
+
+		//（循环，分析）一张纸的厚度是0.01毫米，则该纸对折30次后是多厚（据说超过珠穆朗玛峰的高度）。反过来，一张纸对折几次后，就超过1米厚了？
+			var h = 0.01;
+			for(i=1;i<=30;i++)
+			{
+				h = h * 2 ;      //对折1次    0.02      
+							    //对折2次    0.04 
+							    //对折3次    0.08
+			}
+			document.write("厚度为:"+h + "<br />");
+			var h = 0.01/1000;
+			for(i=1;i<=30;i++)     //i对折次数
+			{
+				h = h * 2;
+				if(h>1&&h<1.5)
+				{
+					document.write("对折的次数为："+ i);
+				}
+			}
+			document.write("<br />");
+
+		//（数组）定义一个数组，并给出6个整数，代表本小组同学的各自年龄，求本小组同学的平均年龄。
+
+			var arr=[22,23,21,17,25,19];
+			var len=arr.length;
+			var sum = 0;
+			var avg;
+			for(var i=0;i<len;i++)
+			{
+				sum += arr[i];   //sum=sum+arr[i]
+			}
+			avg = sum/len;
+			document.write("平均年龄：" + avg);           
+			
+	
+		//（数组）定义一个数组，并给出7个整数，求该数组中的最大值和最小值以及各自的下标各为多少？
+
+			var s=[24,17,18,23,30,28,26];
+			var len=s.length;
+			var max = s[0];
+			for(var i=0;i<len;i++)   //i指数组的下标
+			{
+				if(s[i]>max)        //如果s[i]中有某项比max大
+				{
+					max = s[i];     //将其存到最大值中
+					document.write("<br />最大值为：" + max + "<br />此时i的下标为：" + i);
+				}
+			}
+				
+			var len=s.length;
+			var min = s[0];
+			for(var i=0;i<len;i++)   //i指数组的下标
+			{
+				if(s[i]<min)        //如果s[i]中有某项比min小
+				{
+					min = s[i];     //将其存到最小值中
+					document.write("<br />最小值为：" + min + "<br />此时i的下标为：" + i);
+				}	
+			}
+			document.write("<br />");    
+			
+		 //（数组）定义一个数组，输入9个任意的整数，求该数组中奇数的平均值。
+			var s=[15,17,18,23,30,25,26,28,27];
+			var len = s.length;
+			var sum = 0;
+			var count = 0;			
+			for(var i=0;i<len;i++)
+			{	
+				if(s[i]%2==1)
+				{
+					sum +=s[i];   //奇数的和
+					count++;      //奇数的个数 
+				}
+			}
+				document.write("平均值为："+sum/count);
+				
+	</script>
+</head>
+
+<body>
+
+</body>
+</html>

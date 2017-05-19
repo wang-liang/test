@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--
+Comment Here...
+-->
+<html>
+	<head>
+		<title></title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<input type="button" value="查看时间戳" onclick="f();"/>
+		<script>
+			function f() {
+				//创建ajax请求对象
+				var xhr = new XMLHttpRequest();
+				xhr.onloadend = function() {
+					alert(this.responseText);
+				};
+//				xhr.open("get", "6.php?" + Math.random(), true);
+//				或者设置请求头 Pragma语法 控制缓存
+				xhr.open("get", "6.php", true);
+				xhr.setRequestHeader("pragma", "no-cache");
+				xhr.send(null);
+			}
+		</script>
+	</body>
+</html>

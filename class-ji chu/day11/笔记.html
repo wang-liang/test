@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>网页标题</title>
+<meta name="keywords" content="关键字列表" />
+<meta name="description" content="网页描述" />
+<link rel="stylesheet" type="text/css" href="" />
+<style type="text/css"></style>
+<script type="text/javascript">
+
+
+//charAt()返回指定下标位置的一个字符。如果没有找到，则返回空字符串。
+//将字符串转为大写，隔行输出每个字符
+var str = "第38期php基础班";
+str  = str.toUpperCase();
+for(i=0;i<str.length;i++)
+{
+	document.write(str.charAt(i)+"<br>");
+}
+
+
+//indexOf()  返回一个子字符串在原始字符串中的索引值(查找顺序从左往右查找)。如果没有找到，则返回-1
+//判断用户输入的邮箱地址是否含有“@”符号
+var email = window.prompt("请输入一个邮箱地址");
+if(email.indexOf("@")==-1)
+{
+	document.write("邮箱"+email+"不合法");
+}else
+{
+	document.write("邮箱"+email+"合法");
+}
+document.write("<hr>");
+
+
+//判断一下文件名是不是图片
+var arr = ["gif","png","jpg"];
+var filename = "2005.4.5.66.7.g7.gif"
+var index = filename.lastIndexOf(".");
+var ext = filename.substr(index+1);
+var flag = false;
+for(var i=0;i<arr.length;i++)
+{
+	if(ext == arr[i])
+	{
+		flag = true;
+		break;
+	}
+}
+
+//判断（flag）
+if(flag)
+{
+	document.write("<font color=blue>合法！</font>");
+}
+else
+{
+	document.write("<font color=red>不合法！</font>");
+}
+document.write("<hr>");
+
+
+//输出今天是星期几
+
+var str = "星期日,星期一,星期二,星期三,星期四,星期五,星期六";
+var today = new Date();
+var s = today.getDay();
+var arr = str.split(",");
+document.write("今天是："+arr[s]);
+
+document.write("<hr>");
+
+//将以下字段分割成一个一个的元素
+var str = "第38期php基础班";
+var arr = str.split("");
+document.write(arr[0]);
+document.write("<hr>");
+
+
+
+//join()函数
+var str1 = "星期日,星期一,星期二,星期三,星期四,星期五,星期六";
+//转成数组
+var arr = str1.split(",");
+str = arr.join(",");
+document.write("类型是："+typeof(str)+",字符串："+str1);
+document.write("<hr>");
+
+
+
+//reverse（）函数
+var arr = ["a","b","c","d","e"];
+str = arr.reverse();
+document.write(str);
+
+
+
+//两个整数之间的随机整数
+document.write("<hr>");
+function getRandom(max,min)
+{
+	var random = Math.random()*(max-min)+min;
+	random = Math.floor(random);
+	document.write(random+"<hr>");
+}
+
+getRandom(10,21);  //调用函数
+
+
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

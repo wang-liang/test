@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<userinfo>
+	<person>
+		<id>1</id>
+		<name>Michael Jordan</name>
+		<password>basketball</password>
+		<email>jordan@163.com</email>
+	</person>
+	<person>
+		<id>2</id>
+		<name>David Beckham</name>
+		<password>football</password>
+		<email>beckham@shouhu.com</email>
+	</person>
+	<person>
+		<id>3</id>
+		<name>Mickael Jackson</name>
+		<password>rock</password>
+		<email>jackson@qq.com</email>
+	</person>
+</userinfo>

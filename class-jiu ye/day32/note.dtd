@@ -1,0 +1,6 @@
+<!ELEMENT note ((from|to),heading,body)>
+<!ELEMENT from (#PCDATA)>
+<!ELEMENT to (#PCDATA)>
+<!ELEMENT heading (#PCDATA)>
+<!ELEMENT body (#PCDATA)>
+<!ENTITY company "传智播客">

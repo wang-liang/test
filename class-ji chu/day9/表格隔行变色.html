@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>网页标题</title>
+	<meta name="keywords" content="关键字列表" />
+	<meta name="description" content="网页描述" />
+	<link rel="stylesheet" type="text/css" href="" />
+	<style type="text/css"></style>
+	<script type="text/javascript">
+	var i = 1;
+	var str = " ";
+str +='<table border="1" cellpadding="0" cellspacing="0" align="center" width="500">';
+			str +='<tr align="center" bgcolor="#666633">';
+				str +='<td>编号</td>';
+				str +='<td>新闻标题</td>';
+				str +='<td>发布时间</td>';
+			str +='</tr>';
+			
+			while(i<=10)
+			{
+				if(i%2==0)
+				{
+					str +='<tr align="center" bgcolor="#ccc">';
+				}
+				else
+				{
+					str += '<tr align="center">';
+				}
+									str +='<td>&nbsp;</td>';
+									str +='<td>&nbsp;</td>';
+									str +='<td>&nbsp;</td>';
+									str +='</tr>';
+									
+				
+				i++;
+			}
+			str +='</table>';
+		document.write(str);
+	
+	</script>
+</head>
+
+<body>
+	
+</body>
+</html>

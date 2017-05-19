@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>网页标题</title>
+<meta name="keywords" content="关键字列表" />
+<meta name="description" content="网页描述" />
+<link rel="stylesheet" type="text/css" href="" />
+<style type="text/css"></style>
+<script type="text/javascript" src="jquery-1.4.4.js"></script>
+<script type="text/javascript">
+
+	
+		function sel(){
+			var flag = $('.sel').attr('checked',true);
+			$('.hby').attr('checked',flag);
+		}
+
+	
+
+</script>
+</head>
+
+<body>
+	<h2>复选框选中操作&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" class="sel" name="sel" onclick="sel()" /><br />
+	<input type="checkbox" class="hby" name="hobby[]" value="1" />篮球
+	<input type="checkbox" class="hby" name="hobby[]" value="2" />足球
+	<input type="checkbox" class="hby" name="hobby[]" value="3" />排球
+	<input type="checkbox" class="hby" name="hobby[]" value="4" />看书
+	<input type="checkbox" class="hby" name="hobby[]" value="5" />上网
+	<input type="checkbox" class="hby" name="hobby[]" value="6" />阅读
+	
+</body>
+</html>

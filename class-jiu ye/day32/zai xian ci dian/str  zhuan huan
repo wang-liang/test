@@ -1,0 +1,3 @@
+<?php
+$str = get_student_info;
+$str = str_replace("","_"$str);

@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>网页标题</title>
+<meta name="keywords" content="关键字列表" />
+<meta name="description" content="网页描述" />
+<link rel="stylesheet" type="text/css" href="" />
+<style type="text/css"></style>
+
+</head>
+
+<body>
+<a href='?p=front&c=Product&a=showAllProduct'><font color='red'>产品列表</font></a>
+<a href='?p=front&c=User&a=Index'><font color='red'>用户列表</font></a>
+<table border='1'>
+	<?php 
+	foreach($rec as $key=>$rec){  //循环遍历二维数组
+	?>
+	<tr>
+		<td><?php echo $rec['pro_name'];?></td>
+		<td><?php echo $rec['protype_name'];?></td>
+		<td><?php echo $rec['price'];?></td>
+		<td><?php echo $rec['pinpai'];?></td>
+		<td><?php echo $rec['chandi'];?></td>
+		<td>
+			<a href='?p=front&c=Product&a=Del&id=<?php echo $rec['pro_id'];?>' onclick='return delRow()'>删除</a>
+		</td>
+	</tr>
+	<?php
+	}
+	?>
+</table>
+
+</body>
+</html>
+<script type="text/javascript">
+function delRow(){
+	if(window.confirm("你确定要删除吗？"))
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+</script>

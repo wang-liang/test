@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>网页标题</title>
+	<meta name="keywords" content="关键字列表" />
+	<meta name="description" content="网页描述" />
+	<link rel="stylesheet" type="text/css" href="" />
+	<style type="text/css">
+		ul,li{list-style:none;margin:0;padding:0;}
+		.d1{
+			width:550px;
+			height:180px;
+			border:solid 1px red;
+		}
+		ul{float:right;margin-right:10px;}
+		img{float:left;}
+		.d1 ul li{
+		    width:15px;
+			height:15px;
+			margin-top:3px;
+			border:solid 1px #c0c0c0;	
+			text-align:center;
+			line-height:14px;
+			cursor:pointer;
+		}
+	</style>
+	<script type="text/javascript">
+	
+		
+		window.onload = init;
+
+		var t1;      //这里的t1是一个全局变量，放在函数外面（因为下面ting()这个函数也要用到它）
+		var obj1;
+		function init()
+		{
+			obj1 = document.getElementById("img1");   //获取图片对象的id值
+			document.getElementById("li1").style.backgroundColor = "#ff9966";
+			qidongdingshiqi();
+		}
+
+		function qidongdingshiqi()
+		{
+			window.clearInterval(t1);                //先清除一下定时器，以避免重复
+			t1 = window.setInterval("f1()",1000);
+		}
+		var i = 1;   //i表示有几张图片（在这里其实也就是每张图片名字下的编号）
+		function f1()
+		{
+			i++;
+			if(i>=7)         //当图超出个数时自动反回第一张
+			{
+				i=1;
+			}
+			
+			obj1.src = "images/dd_scroll_" + i + ".jpg";  
+
+			huanbeijing();
+
+		}
+		function ting()
+		{
+			window.clearInterval(t1);
+		}
+		function stop(n)
+		{
+			window.clearInterval(t1);   //先清除定时器，让定时器停止工作
+
+			i = n;   //控制图片切换的顺序,n指stop()函数的序号
+
+			obj1.src = "images/dd_scroll_" + n + ".jpg";
+			
+			huanbeijing();
+		}
+
+		//换按钮背景：
+		function huanBeijing()
+		{
+			
+			//先讲“其他按钮”变成普通背景（第一种方法）：
+			/*
+			for(var k = 1; k <= 6; k++)	
+			{
+				if( k != i)
+				{
+					var obj3 = document.getElementById("li" + k);
+					obj3.style.backgroundColor = "";
+				}
+			}
+		
+
+		 */
+
+		//第二种方法：
+
+		//先将所有按钮变成普通形式
+		var m=document.getElementsByTagName("li");  //找到网页中的所有li标签，此方法不依赖于id
+		var len = obj1.length;
+		for(j=0;j<len;j++)
+		{
+			m(j).style.backgroundColor = "";
+		}
+		//当前背景换背景色
+		var obj2 = document.getElementById("li" + i);
+		obj2.style.backgroundColor="#ff9966";
+	}
+	</script>
+</head>
+
+<body>
+	<div class="d1">                                                                         
+		<img src="images/dd_scroll_1.jpg" id="img1" onmouseover="ting()" onmouseout="qidongqingshiqi()"/>
+		<ul>
+			<li onmouseover="stop(1)" onmouseout="qidongqingshiqi()" id="li1">1</li>
+			<li onmouseover="stop(2)" onmouseout="qidongqingshiqi()"  id="li2">2</li>
+			<li onmouseover="stop(3)" onmouseout="qidongqingshiqi()"  id="li3">3</li>
+			<li onmouseover="stop(4)" onmouseout="qidongqingshiqi()"  id="li4">4</li>
+			<li onmouseover="stop(5)" onmouseout="qidongqingshiqi()"  id="li5">5</li>
+			<li onmouseover="stop(6)" onmouseout="qidongqingshiqi()"  id="li6">6</li>
+		</ul>
+	</div>
+</body>
+</html>

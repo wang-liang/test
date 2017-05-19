@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>无标题文档</title>
+</head>
+<body>
+<form name="form1" method="post" action="login.php" align="center">
+<table width="800" border="1" rules="all" height="400" bordercolor=#e1e1e1 cellpadding="5">
+	<tr>
+		<td colspan="3">1.会员登录名和密码</td>
+	</tr>
+	<tr>
+		<td width="140" align="right">用户名：</td>
+		<td width="200"><input type="text" name="username1"><img src="images/004.bmp"></td>
+		<td><img src="images/002.bmp"><font size="2" color=#41beb1>5-15位，请使用英文（a-z、A-Z）、数字（0-9）</font></td>
+	</tr>
+	<tr>
+		<td align="right">密&nbsp;&nbsp;码：</td>
+		<td><input type="password" name="userpwd"><img src="images/004.bmp"></td>
+		<td><font size="2" color=#41beb1>5-15位，请使用英文（a-z）、数字（0-9）注意区分大小写；<br />密码不能与登录名相同；易记；难猜</font></td>
+	</tr>
+	<tr>
+		<td align="right">再次输入密码：</td>
+		<td><input type="password" name="userpwd"><img src="images/004.bmp"></td>
+		<td><font size="2" color=#41beb1>两次输入的密码必须一致</font></td>
+	</tr>
+		<tr>
+		<td colspan="3">2.姓名和联系方式</td>
+	</tr>
+		<tr>
+		<td align="right">真实姓名：</td>
+		<td><input type="text" name="username2"><img src="images/004.bmp"></td>
+		<td>
+			<input type="radio" name="sex" value="男" >男
+			<input type="radio" name="sex" value="女" checked="checked">女
+		</td>
+	</tr>
+		<tr>
+		<td align="right">电子邮箱：</td>
+		<td><input type="text" name="youxiang"><img src="images/004.bmp"></td>
+		<td><font size="2" color="red">非常重要！</font><br /><font size="2" color=#41beb1>这是客户与您的联系方式，请一定真实填写</font></td>
+	</tr>
+		<tr>
+		<td align="right">固定电话：</td>
+		<td><input type="text" name="tel"><img src="images/004.bmp"></td>
+		<td><font size="2" color=#41beb1>区号+电话号码</font></td>
+	</tr>
+		<tr>
+		<td align="right">公司所在地：</td>
+		<td colspan="2">
+			<select name="city" style="width:140px;">
+				<option value="北京">北京</option>
+				<option value="天津">天津</option>
+				<option value="上海" selected="selected">上海</option>
+			</select>
+			<select name="chengqu" style="width:100px;">
+				<option value="东城">东城</option>
+				<option value="朝阳">朝阳</option>
+				<option value="昌平">昌平</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td align="right">街道地址：</td>
+		<td colspan="2"><input type="text" name="jiandao" style="width:450px;"><font size="2" color=#41beb1>填写县（区）、街道、门牌号</font></td>
+	</tr>
+		<tr>
+		<td align="right">传真号码：</td>
+		<td><input type="text" name="chuanzhen"></td>
+		<td></td>
+	</tr>
+		<tr>
+		<td align="right">手机号码：</td>
+		<td><input type="text" name="cellphone"></td>
+		<td></td>
+	</tr>
+		<tr>
+		<td align="right">邮政编码：</td>
+		<td><input type="text" name="youbian"></td>
+		<td></td>
+	</tr>
+	</tr>
+		<tr>
+		<td colspan="3">3.公司名称和主营业务</td>
+	</tr>
+	</tr>
+		<tr>
+		<td align="right">贵公司名称：</td>
+		<td><input type="text" name="mingcheng"><img src="images/004.bmp"></td>
+		<td><font size="2" color=#41beb1>请填写在工商局注册的名称<br />无商号的个体经营者填写执照上的姓名，如：张三（个体经营）</font></td>
+	</tr>
+	</tr>
+		<tr>
+		<td align="right">你的职位：</td>
+		<td><input type="text" name="zhiwei"><img src="images/004.bmp"></td>
+		<td></td>
+	</tr>
+	</tr>
+		<tr>
+		<td align="right">主营行业：</td>
+		<td>
+			<select name="hangye" style="width:120px;">
+				<option>电子电工</option>
+				<option>机械制造</option>
+				<option>计算机应用</option>
+			</select>
+		</td>
+		<td><font size="2" color=#41beb1>请正确选择。您会收到该行业、该产品的供求信息</font></td>
+	</tr>
+	</tr>
+		<tr>
+		<td align="right">主营产品/服务：</td>
+		<td><input type="text" name="zhuying"></td>
+		<td><font size="2" color=#41beb1>三个主要产品名/服务名，最少要填一个。例如：太阳帽、布料、拉链</font></td>
+	</tr>
+	</tr>
+		<tr>
+		<td align="right">公司网址：</td>
+		<td><input type="text" name="wangzhi" value="http://"></td>
+		<td></td>
+	</tr>
+	</tr>
+		<tr>
+		<td align="right"></td>
+		<td>
+			<input type="image" src="images/003.bmp">
+		</td>
+		<td></td>
+	</tr>
+</table>
+</form>
+</body>
+</html>

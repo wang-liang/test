@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>网页标题</title>
+<meta name="keywords" content="关键字列表" />
+<meta name="description" content="网页描述" />
+<link rel="stylesheet" type="text/css" href="" />
+<style type="text/css"></style>
+<script type="text/javascript">
+
+window.onload = function()
+{
+	var theForm = document.form1;
+	theForm.province.selectedIndex = 1;
+	theForm.province.options[2].text = "传智播客";
+	alert(theForm.province.options[2].text)
+}
+
+</script>
+</head>
+
+<body>
+<form name="form1" method="post" action="login.php">
+省份：<select name="province">
+		<option value="0"></option>
+		<option value="1"></option>
+		<option value="2"></option>
+
+
+
+</form>
+</body>
+</html>

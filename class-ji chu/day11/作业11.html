@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>网页标题</title>
+<meta name="keywords" content="关键字列表" />
+<meta name="description" content="网页描述" />
+<link rel="stylesheet" type="text/css" href="" />
+<style type="text/css"></style>
+<script type="text/javascript">
+/*
+//字符，偏难）利用var s1 = prompt(“请输入任意字符”,””)可以获取用户输入的字符(输入一个单词)（存到变量s1中了），试编程将用户输入的字符“反转顺序”并首尾字母转为大写，其他字母转为小写后alert出来。
+//如：Beijing ——  GnijieB
+
+var s1= window.prompt();
+var d1=s1.substr(1);                       
+var k1=s1.charAt(0);
+var k2=k1.toUpperCase();
+var k3=k2.concat(d1);
+var k4=k3.split("");
+var k5=k4.reverse();
+var k6=k5.join("");
+var d2=k6.substr(1);
+var k7=k6.charAt(0);
+var k8=k7.toUpperCase();
+var k9=k8.concat(d2);
+alert(k9)
+document.write("<hr>");
+
+//另一种方法
+var s1= window.prompt();
+var k1=s1.charAt(0);
+var k2=k1.toUpperCase();
+var a=s1.charAt(s1.length-1);
+var k3=a.toUpperCase();
+var k4=s1.split("");
+k4[0]=k2
+k4[s1.length-1]=k3
+var k5=k4.reverse();
+var k6=k5.join("");
+alert(k6);
+document.write("<hr>");
+*/
+
+//（字符）获取一个长文件路径（比如”E:/itcast/class/php/js/day2/abc.html”）中的文件名(abc)及其后缀(html)。
+
+var s = "E:/itcast/class/php/js/day2/abc.html";
+var n1 = s.lastIndexOf(".");
+var n2 = s.substr(n1+1);
+
+var s1 = s.lastIndexOf("/");
+var s2 = s.substring(s1+1,n1);
+
+document.write(n2+"<br>"+s2);
+document.write("<hr>");
+
+//（字符）将字符串”49238028424”以“2”为分隔符分割为数组，并求出数组的长度。
+var a = "49238028424";
+var a1 = a.split("2");
+var k = a1.length
+document.write("数组长度为："+k);
+document.write("<hr>");
+
+//（Date）计算自己再活多少天，就能活到100岁？
+
+var d1=new Date();
+var d2=d1.getTime();
+var s1=new Date(1989+100,7,21);
+var s2=s1.getTime();
+var s=(s2-d2)/1000/3600/24;
+var s=Math.floor(s);
+document.write("再活"+s+"天就到100岁了！<hr>");
+
+//（函数）定义一个函数，获得任意邮箱的用户名和域名。如：beijing@qq.com
+
+function getInfo(f1)
+{
+	var n1=f1.lastIndexOf("@");
+	var n2=f1.substring(0,n1);
+	var n3=f1.substring(n1+1);
+	document.write("用户名为："+n2+",域名为："+n3);
+}
+getInfo("73882264@126.com")
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

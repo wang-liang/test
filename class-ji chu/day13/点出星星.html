@@ -1,0 +1,43 @@
+
+<html onclick="init(event)">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>网页标题</title>
+<meta name="keywords" content="关键字列表" />
+<meta name="description" content="网页描述" />
+<link rel="stylesheet" type="text/css" href="" />
+<style type="text/css"></style>
+<script type="text/javascript">
+
+function init(e)
+{
+	
+	
+	
+	var imgobj = document.createElement("img");
+	imgobj.src = "images/xingxing.gif";
+	var width = getRandom(15,65);
+	imgobj.width = width;
+	var x = e.clientX;
+	var y = e.clientY;
+
+	//imgobj.style.position = "absolute";
+	//imgobj.style.left = x-width/2+"px";
+	//imgobj.style.top = y-width/2+"px";
+	document.body.appendChild(imgobj);
+	
+}
+
+function getRandom(min,max)
+{
+	var random = Math.random()*(max-min)+min;
+	random = Math.floor(random);
+	return random;
+}
+</script>
+</head>
+
+<body bgcolor="#000">
+
+</body>
+</html>

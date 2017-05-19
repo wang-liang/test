@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>网页标题</title>
+<meta name="keywords" content="关键字列表" />
+<meta name="description" content="网页描述" />
+<link rel="stylesheet" type="text/css" href="" />
+<style type="text/css"></style>
+<script type="text/javascript">
+
+//1、（函数）检查用户输入的用户名，是否含有[*,%,&,<,>,/,\,!,@,#]特殊字符，如果有，则输出“用户名含有特殊字符”，否则输出“用户名符合要求”
+var s = window.prompt("请输入用户名");
+var arr = ["*","%","&","<",">","/","\\","!","@","#"];
+function check(s1)
+{
+	for(var i=0;i<arr.length;i++)
+	{
+		for(var j=0;j<s1.length;j++)
+		{
+			if(arr[i]==s1.charAt[j])   //如果arr中的某一项与s中的某一项相等
+			{
+				return true;   //返回true,并立即退出循环
+			}
+		}
+	}
+	return false;    //如果不相等，则直到循环结束，返回false值并立即退出函数
+}
+if(check(s))
+{
+	document.write("用户名含有特殊字符");
+}
+else
+{
+	document.write("用户名符合要求");
+}
+
+
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

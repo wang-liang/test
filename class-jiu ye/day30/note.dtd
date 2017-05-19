@@ -1,0 +1,7 @@
+<!ELEMENT note (from,to,heading,body)>
+<!ELEMENT from (#PCDATA)>
+<!ELEMENT to (#PCDATA)>
+<!ELEMENT heading (#PCDATA)>
+<!ELEMENT body (#PCDATA)>
+<!ENTITY com "少林寺">
+<!ENTITY % company1 "少林寺">

@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>网页标题</title>
+	<meta name="keywords" content="关键字列表" />
+	<meta name="description" content="网页描述" />
+  <link rel="stylesheet" type="text/css" href="" />
+  <style type="text/css"></style>
+  <script type="text/javascript">
+ for( var i = 1; i <= 9; i++)    //i表示行号
+		{
+			//输出第i行的所有列
+			for(var j = 1; j <= i; j++)
+			{
+				//输出一列
+				
+				document.write( i + " x " + j + " = " + i*j + "&nbsp;&nbsp;&nbsp;&nbsp;");
+
+				//对("i x j = i*j")进行分离--->
+				                            //("i x j = i*j");
+
+                                            //("" i " x " j " = " i*j "");
+
+                                            //("" + i + " x " + j + " = " + i*j + "");
+
+                                            // document.write( i + " x " + j + " = " + i*j + "");
+				              
+				if( i*j < 10)          //判断 i*j 是否小于10，如果小于10，那么输出一个空格("&nbsp;")
+				{
+				document.write("&nbsp;")	
+				}
+			}
+
+			document.write("<br />");
+		}
+
+
+  </script>
+ </head>
+
+ <body>
+ 
+ </body>
+</html>

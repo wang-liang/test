@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+ </HEAD>
+
+ <BODY>
+  <table border="1" width="500" align="center" cellspacing="2">
+  <caption>课程表</coption>
+  <tr>
+  <th>项目</th>
+  <th colspan="5">上课</th>
+  <th colspan="2">休息</th>
+  </tr>
+  <tr>
+  <th>星期</th>
+  <th>星期一</th>
+  <th>星期二</th>
+  <th>星期三</th>
+  <th>星期四</th>
+  <th>星期五</th>
+  <th>星期六</th>
+  <th>星期日</th>
+  </tr>
+  <tr>
+  <td rowspan="4" align="center">上午</td>
+  <td align="center">2</td>
+  <td align="center">3</td>
+  <td align="center">4</td>
+  <td align="center">5</td>
+  <td align="center">6</td>
+  <td align="center">7</td>
+  <td rowspan="4" align="center">休息</td>
+  </tr>
+  <tr>
+  <td align="center">2</td>
+  <td align="center">3</td>
+  <td align="center">4</td>
+  <td align="center">5</td>
+  <td align="center">6</td>
+  <td align="center">7</td>
+  </tr>
+  <tr>
+  <td align="center">2</td>
+  <td align="center">3</td>
+  <td align="center">4</td>
+  <td align="center">5</td>
+  <td align="center">6</td>
+  <td align="center">7</td>
+  </tr>
+  <tr>
+  <td align="center">2</td>
+  <td align="center">3</td>
+  <td align="center">4</td>
+  <td align="center">5</td>
+  <td align="center">6</td>
+  <td align="center">7</td>
+  </tr>
+  <tr>
+  <td rowspan="2" align="center">下午</td>
+  <td align="center">2</td>
+  <td align="center">3</td>
+  <td align="center">4</td>
+  <td align="center">5</td>
+  <td align="center">6</td>
+  <td align="center">7</td>
+  <td rowspan="2" align="center">休息</td>
+  </tr>
+  <tr>
+  
+  <td align="center">2</td>
+  <td align="center">3</td>
+  <td align="center">4</td>
+  <td align="center">5</td>
+  <td align="center">6</td>
+  <td align="center">7</td>
+  </tr>
+
+ </BODY>
+</HTML>

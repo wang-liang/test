@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+Comment Here...
+-->
+<html>
+	<head>
+		<title>AJAX POST请求</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<form name="login">
+			<p>账号：<input type="text" name="uname" value="" /></p>
+			<p>密码：<input type="password" name="password" value="" /></p>
+			<input type="submit"  value="登录" />
+		</form>
+		<script>
+			//给表单绑定提交事件
+			document.login.onsubmit = function () {
+				//获取用户登录信息
+				var uname = this.uname.value;
+				var password = this.password.value;
+				/**
+				 * 使用AJAX发送POST请求到服务器执行验证
+				 */
+				//创建请求对象
+				var xhr = new XMLHttpRequest();
+				//定义完成时的动作
+				xhr.onloadend = function () {
+					alert(this.responseText);
+				};
+				//建立连接
+				xhr.open("post", "4.php", true);
+				//设置请求头 告知浏览器数据编码格式
+				xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
+				//发送经过url encode的数据
+				xhr.send("uname=" + uname + "&password=" + password);
+				//阻止表单提交
+				return false;
+			};
+		</script>
+	</body>
+</html>

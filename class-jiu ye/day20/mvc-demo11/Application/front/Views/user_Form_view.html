@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>网页标题</title>
+<meta name="keywords" content="关键字列表" />
+<meta name="description" content="网页描述" />
+<link rel="stylesheet" type="text/css" href="" />
+<style type="text/css"></style>
+<script type="text/javascript">
+
+</script>
+</head>
+
+<body>
+<form method="post" action="?a=UpdateUser" name="form1">
+<table border="1" rules="all" width="700" >
+	<tr>
+		<td colspan="3">添加数据</td>
+	</tr>
+	<!--将当前要修改的用户的ID存储在一个隐藏域中，以便提交修改后的表单的时候
+	 一并又发回（传回）服务器，以据此作为修改的用户的id的查询条件。-->
+	<input type="hidden" name="id" value='<?php echo $user['id'];?>'>
+	<!--$user是数据库返回的一条记录，以下所有value值下标都是数据库中的字段名-->
+	<tr>
+		<td width="100">用户名：</td>
+		<td colspan="2"><input type="text" id="username" name="username" size="14"  onfocus="focusUsername()" onblur="blurUsername()" value = '<?php echo $user['username'];?>'>
+		<span id="user" class="msg"></span>
+		</td>
+	</tr>
+	<tr>
+		<td>密码：</td>
+		<td colspan="2"><input type="text" name="pwd"  id="password" size="12" onfocus="focuspwd()" onblur="blurpwd()">
+		<span id="pwd" class="msg"></span>
+		</td>
+	</tr>
+	<tr>
+		<td>年龄：</td>
+		<td colspan="2"><input id="age" type="text" name="age" size="8" onfocus="focusage()" onblur="blurage()" value='<?php echo $user['age'];?>'>
+		<span id="age" class="msg"></span>
+		</td>
+	</tr>
+	<tr>
+		<td>学历：</td>
+		<td colspan="2">
+			<select name="edu" id="edu" onchange="checkEdu">
+				<option value="初中" <?php if($user['edu'] == '初中'){echo "selected";}?>>初中</option>
+				<option value="高中" <?php if($user['edu'] == '高中'){echo "selected";}?>>高中</option>
+				<option value="大专" <?php if($user['edu'] == '大专'){echo "selected";}?>>大专</option>
+				<option value="大学" <?php if($user['edu'] == '大学'){echo "selected";}?>>大学</option>
+			</select>
+			<span id="eduMsg" class="msg"></span>
+		</td>
+	</tr>
+	<tr>
+		<td>兴趣：</td>
+		<td colspan="2">
+		<input type="checkbox" name="fav[]" value="排球" <?php if(in_array('排球',$fav)){echo "checked";}?>>排球
+		<input type="checkbox" name="fav[]" value="篮球" <?php if(in_array('篮球',$fav)){echo "checked";}?>>篮球
+		<input type="checkbox" name="fav[]" value="足球" <?php if(in_array('足球',$fav)){echo "checked";}?>>足球
+		<input type="checkbox" name="fav[]" value="中国足球" <?php if(in_array('中国足球',$fav)){echo "checked";}?>>中国足球
+		<input type="checkbox" name="fav[]" value="地球" <?php if(in_array('地球',$fav)){echo "checked";}?>>地球
+		</td>
+	</tr>
+	<tr>
+		<td>来自：</td>
+		<td colspan="2">
+			<input type="radio" name="from2" value="东北" <?php if($user['from2'] == '东北'){echo "checked";}?> onclick="clickFrom()">东北
+			<input type="radio" name="from2" value="华北" <?php if($user['from2'] == '华北'){echo "checked";}?> onclick="clickFrom()">华北
+			<input type="radio" name="from2" value="西北" <?php if($user['from2'] == '西北'){echo "checked";}?> onclick="clickFrom()">西北
+			<input type="radio" name="from2" value="华东" <?php if($user['from2'] == '华东'){echo "checked";}?> onclick="clickFrom()">华东
+			<input type="radio" name="from2" value="华南" <?php if($user['from2'] == '华南'){echo "checked";}?> onclick="clickFrom()">华南
+			<input type="radio" name="from2" value="华西" <?php if($user['from2'] == '华西'){echo "checked";}?> onclick="clickFrom()">华西
+			<span id="fromMsg"></span>
+		</td>
+	</tr>
+	<tr>
+		<td ><input type="submit" value="o k" onclick="return checkForm()"></td>
+		<td colspan="2">&nbsp;</td>
+	</tr>
+</table>
+</form>
+
+</body>
+</html>

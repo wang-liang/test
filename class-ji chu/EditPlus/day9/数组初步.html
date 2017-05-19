@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>网页标题</title>
+  <script type="text/javascript">
+  //求一个数学数组的所有和
+  var s = [2,5,6,8,10];
+  var sum = 0;    //用此变量来存和
+  for(var i=0;i<5;i++){
+	sum = sum + s[i];   //或者写成:  sum +=s[i]
+  }
+  document.write("和为：" + sum);
+		
+
+  //求一个组数的平均值
+  var s2=[3,5,7,2,8];
+  var len=s2.length;
+  var sum2 = 0;
+  for (var i=0;i<len;i++)
+  {
+	sum2 +=s2[i];
+	var avg = sum2/len;
+  }
+  document.write("<br/>平均值为：" + avg);
+
+  //求一个整数数组中基数的个数和偶数的个数
+  var s3=[2,3,2,5,7];
+  var len3=s3.length;
+  var c1=0,c2=0;     //定义c1为基数个数，c2为偶数个数
+  for (var i=0;i<len3;i++)
+  {
+	  if(s3[i]%2==1)
+	  {
+		c1++;
+	  }
+	  else{
+		c2++;
+	  }
+  }
+  document.write("<br/>基数个数为：" + c1 + "偶数个数为:" + c2);
+
+  //求一个数的最大值和最小值以及其下标
+  var s4=[4,3,6,5,7,14];
+  var len4=s4.length;
+  var max=s4[0],min=s4[0];
+  for (var i=0;i<len4;i++ )
+  {
+	if(s4[i]>max)
+	{
+		max = s4[i];
+	}
+	else if(s4[i]<min)
+	{
+		min = s4[i];
+	}
+  }
+  document.write("<br/>最大值为：" + max + "最小值为：" + min);
+
+
+  </script>
+ </head>
+
+ <body>
+	
+ </body>
+</html>

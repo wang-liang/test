@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>网页标题</title>
+<meta name="keywords" content="关键字列表" />
+<meta name="description" content="网页描述" />
+<link rel="stylesheet" type="text/css" href="" />
+<style type="text/css"></style>
+<script type="text/javascript">
+
+window.onload = function(){
+	document.body.bgColor = "#000";       //设定body背景色
+	window.setInterval("star()",300);    //定时器
+}
+
+function star()
+{
+	var imgObj = document.createElement("img");  //创建img标签
+	var width = getRandom(15,85);    //图片随机大小显示
+	imgObj.setAttribute("width",width);    //设定图片的宽度属性（定义一个变量）
+	imgObj.setAttribute("src","images/xingxing.gif");   //插入一张图片
+	var x = getRandom(0,innerWidth);   //  获取x随机位置（从0--屏幕的内宽）
+	var y = getRandom(0,innerHeight);  //  获取y随机位置（从0--屏幕的内高）
+	imgObj.setAttribute("style","position:absolute;left:"+x+"px;top:"+y+"px;");   //设定图片定位方式，图片随机出x,y位置现
+	
+	imgObj.setAttribute("onclick","removeImg(this)");   //追加点击事件，删除星星
+	document.body.appendChild(imgObj);      //将图片标签追加到body父元素下
+
+}
+
+function getRandom(min,max)
+{
+	var random = Math.random()*(max-min)+min;
+	random = Math.floor(random);
+	return random;
+}
+
+function removeImg(obj)
+{
+	document.body.removeChild(obj);   //在父元素下删除子节点
+}
+
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

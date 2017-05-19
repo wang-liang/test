@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>网页标题</title>
+	<meta name="keywords" content="关键字列表" />
+	<meta name="description" content="网页描述" />
+  <link rel="stylesheet" type="text/css" href="" />
+  <style type="text/css"></style>
+  <script type="text/javascript"></script>
+ </HEAD>
+
+ <BODY>
+	<h1 align="center">PHP介绍</h1>
+	<h1><i>php现状及未来发展趋势：</i></h1>
+		<font size="5">
+			<ol>
+				<li>全球<font color=”red”>5000万</font>互联网网站中，有<font color=”red”>60%以上</font>使用着PHP技术；</li>
+				<li>2010年PHP从业人数增加<b><u>42%</u></b>，远超JAVA的<b><u>13%</u></b>和.NET的<b><u>24%</u></b>；</li>
+				<li>PHP是全球五大最受欢迎的编程语言之一，并且是唯一入选的脚本语言；</li>
+				<li>国内<b><u>80%以上</u></b>的动态网站使用PHP开发；</li>
+				<li>AlexaTOP500中国网站排名，有394家使用了PHP技术，比例为78.8%。</li>
+			</ol>
+		</font>
+	<h1><i>PHP以其灵活高效等特点实现了各种终端和平台的互联网应用，源于其具有如下特点：</i></h1>
+		<font size="5">
+			<ol>
+				<li>基于Web量身定制</li>
+				<li>LAMP架构安全稳定</li>
+				<li>简单快速，扩展性强</li>
+				<li>企业级应用反战迅速</li>
+			</ol>
+		</font>
+	<p><font size="5">在与其他同类语言的比较中，PHP具有<u>开发速度快</u>、<u>运行效率高</u>、<u>安全性好</u>、<u>可扩展性强</u>、<u>开源自由</u>等特点；而回顾PHP近10年来的发展过程、展望未来互联网行业的发展趋势，我们可以得出结论：PHP的发展势头不可阻挡，必将成为未来WEB开发领域的 <font size="6"color=”red”><i><u>主流技术体系</u></i></font>。</font></p>
+	<h1><i>PHP就业现状</i></h1>
+	<p><font size="5">随着IT业和互联网的超速发展，企业对PHP程序员的需求也大量增加，PHP程序员和招聘岗位的供求比例是1：40，很多公司半年都招不到一个合适的PHP程序员。这个岗位是程序员中最火的，这种严重供不应求的局面在未来几年中将愈演愈烈。</font></p>
+ </BODY>
+</HTML>

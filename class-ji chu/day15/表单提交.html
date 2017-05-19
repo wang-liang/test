@@ -1,0 +1,58 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>网页标题</title>
+<meta name="keywords" content="关键字列表" />
+<meta name="description" content="网页描述" />
+<link rel="stylesheet" type="text/css" href="" />
+<style type="text/css"></style>
+<script type="text/javascript">
+
+function checkForm()
+{
+	if(document.form1.username.value== 0)
+	{
+		window.alert("用户名不能为空!");
+	}
+	else if(document.form1.username.value.length<5 || document.form1.username.value.length>20)
+	{
+		window.alert("用户名只能介于5-20个字符之间!")
+	}
+	else if(checkOtherChar(document.form1.username.value))
+	{
+		window.alert("用户名中含有特殊字符!");
+	}
+	else
+	{
+		return true;
+	}
+}
+function checkOtherChar(str)
+{
+	var arr = ["#","$","%","&","*","\\","?","/"];
+	for(i=0;i<arr.length;i++)
+	{
+		for(i=0;j<str.length;j++)
+		{
+			if(arr[i]==str.charAt(j))
+			{
+				return true;
+			}
+		}
+	}
+	return false;
+}
+
+</script>
+</head>
+
+<body>
+<form method="post" name="form1" action="login.php">
+	用户名：<input type="text" name="username" >
+	密码：<input type="password" name="userpwd" >
+	<input type="button" value="提交表单" onclick="return checkForm()">
+
+</form>
+</body>
+</html>
